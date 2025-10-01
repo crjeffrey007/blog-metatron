@@ -8,15 +8,15 @@
   <title>Metatron Studio - Desarrollo Web, Marketing, E-commerce, Plataformas de Pago y Negocios Digitales</title>
 
   <!-- ✅ Hreflang tags -->
-  <link rel="alternate" href="https://www.metatronstudio.com/" hreflang="es" />
-  <link rel="alternate" href="https://www.metatronstudio.com/en.html/" hreflang="en" />
-  <link rel="alternate" href="https://www.metatronstudio.com/pt.html/" hreflang="pt" />
-  <link rel="alternate" href="https://www.metatronstudio.com/" hreflang="x-default" />
+  <link rel="alternate" href="https://blog.metatronstudio.com/" hreflang="es" />
+  <link rel="alternate" href="https://blog.metatronstudio.com/en.html/" hreflang="en" />
+  <link rel="alternate" href="https://blog.metatronstudio.com/pt.html/" hreflang="pt" />
+  <link rel="alternate" href="https://blog.metatronstudio.com/" hreflang="x-default" />
   
   <!-- Open Graph para redes sociales -->
   <meta property="og:title" content="Metatron Studio • Desarrollo Web y Marketing Digital Internacional">
   <meta property="og:description" content="Metatron Studio impulsa tu marca con sitios web modernos, tiendas online, apps y marketing digital. Ayudamos a empresas en Latinoamérica y EE.UU. a crecer con proyectos rápidos, optimizados y diseñados para destacar en un mundo digital competitivo.">
-  <meta property="og:url" content="https://www.metatronstudio.com/">
+  <meta property="og:url" content="https://blog.metatronstudio.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.metatronstudio.com/img/og-image.jpg">
 
@@ -25,7 +25,7 @@
   <meta name="twitter:title" content="Metatron Studio • Desarrollo Web y Marketing Digital Internacional">
   <meta name="twitter:description" content="Sitios web, e-commerce y marketing digital con clientes en todo el mundo.">
   <meta name="twitter:image" content="https://www.metatronstudio.com/img/og-image.jpg">
-  <link rel="canonical" href="https://www.metatronstudio.com/">
+  <link rel="canonical" href="https://blog.metatronstudio.com/">
 
   <!-- Datos estructurados con Schema.org -->
   <script type="application/ld+json">
@@ -278,9 +278,26 @@
   });
 </script>
 
+  <script>
+    async function loadPosts() {
+      const posts = [
+        { title: "Mi primer post", date: "2025-09-30", body: "¡Hola! Este es el primer post de mi blog." }
+      ];
+      const container = document.getElementById("posts");
+      posts.forEach(p => {
+        const div = document.createElement("div");
+        div.className = "post";
+        div.innerHTML = `<h2>${p.title}</h2><small>${p.date}</small><p>${p.body}</p>`;
+        container.appendChild(div);
+      });
+    }
+    loadPosts();
+  </script>
+  
   <!-- WhatsApp flotante -->
   <a href="https://wa.me/5516997152073" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp whatsapp-icon" aria-hidden="true"></i>
   </a>
 </body>
 </html>
+
