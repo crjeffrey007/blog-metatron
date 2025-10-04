@@ -5,12 +5,12 @@ export default defineConfig({
   clientId: process.env.TINA_PUBLIC_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
   build: {
-    outputFolder: "admin",   // carpeta donde se genera el panel
-    publicFolder: "public",  // carpeta pública de tu proyecto
+    outputFolder: "admin",  // 📂 Panel de Tina se generará en /admin
+    publicFolder: "public",
   },
   media: {
     tina: {
-      mediaRoot: "uploads",  // subcarpeta dentro de /public para imágenes
+      mediaRoot: "uploads",
       publicFolder: "public",
     },
   },
@@ -20,28 +20,14 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "posts",
-        format: "mdx", // 👈 usar mdx en lugar de md
+        format: "mdx",
         fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Título",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "image",
-            name: "cover",
-            label: "Imagen de portada",
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Contenido",
-            isBody: true,
-          },
+          { type: "string", name: "title", label: "Título", isTitle: true, required: true },
+          { type: "image", name: "cover", label: "Imagen de portada" },
+          { type: "rich-text", name: "body", label: "Contenido", isBody: true },
         ],
       },
     ],
   },
 });
+
